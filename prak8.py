@@ -115,3 +115,8 @@ btn_submit = tk.Button(
     width=15,
 )
 btn_submit.grid(row=4, column=0, columnspan=2, pady=15)
+
+btn_submit.bind("<Enter>", on_enter)
+btn_submit.bind("<Leave>", on_leave)
+
+root.mainloop()
