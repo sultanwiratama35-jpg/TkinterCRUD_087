@@ -85,3 +85,33 @@ def on_leave(e):
     btn_submit["fg"] = "white"
     
 # 5. Layout GUI Tkinter
+root = tk.Tk()
+root.title("Aplikasi Prediksi Fakultas")
+root.geometry("320x240")
+root.configure(padx=20, pady=20)
+
+tk.Label(root, text="Nama Siswa:").grid(row=0, column=0, sticky="w", pady=5)
+entry_nama = tk.Entry(root)
+entry_nama.grid(row=0, column=1, pady=5)
+
+tk.Label(root, text="Nilai Biologi:").grid(row=1, column=0, sticky="w", pady=5)
+entry_bio = tk.Entry(root)
+entry_bio.grid(row=1, column=1, pady=5)
+
+tk.Label(root, text="Nilai Fisika:").grid(row=2, column=0, sticky="w", pady=5)
+entry_fis = tk.Entry(root)
+entry_fis.grid(row=2, column=1, pady=5)
+
+tk.Label(root, text="Nilai Inggris:").grid(row=3, column=0, sticky="w", pady=5)
+entry_ing = tk.Entry(root)
+entry_ing.grid(row=3, column=1, pady=5)
+
+btn_submit = tk.Button(
+    root,
+    text="Submit",
+    command=submit_nilai,
+    bg="#644475",
+    fg="black",
+    width=15,
+)
+btn_submit.grid(row=4, column=0, columnspan=2, pady=15)
